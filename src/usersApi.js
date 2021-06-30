@@ -3,7 +3,7 @@ import axios from 'axios'
 const config = {
         headers:{
                 'Content-Type':'application/json',
-                'Authorisation':'<your_git token>'
+                'Authorisation':'<your api token>'
         }
 }
 const api = axios.create({
