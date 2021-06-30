@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+
+import {useState} from 'react'
+
 import './App.css';
+import Users from './Users'
+import UserDetails from './UserDetails'
+import {updateUser} from './usersApi'
 
 function App() {
+  const [userId,setUserId] = useState()
+  
+  /*const  handleUpdate=async ()=> {
+    const response =await updateUser({id:3,name:"Ck Chopra",gender:"Male"})
+    console.log(response)
+  }*/
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{padding:20, width:'30%', borderRight: '2px solid white'}}>
+        <Users userId={userId} setUserId={setUserId}/>
+      </div>
+      <div style={{padding:20, width:'70%'}}>
+      
+        <UserDetails id={ userId} />
+      </div>
+    {/* <button onClick={handleUpdate}>UpdateUser TEST</button> */}
     </div>
+    
   );
 }
 

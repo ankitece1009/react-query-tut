@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  background-color:lightgray;
+  display: flex;
 }
 
 .App-logo {
@@ -35,4 +36,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.OnMouseOver{
+  background-color: lightsteelblue;
+}
+
+.OnMouseOver:hover{
+  color:mediumseagreen;
 }
